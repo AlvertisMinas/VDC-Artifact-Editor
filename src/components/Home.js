@@ -33,7 +33,7 @@ function Copyright () {
         href='https://thevdc.github.io/virtualdatacontainer/'
         target='_blank'
       >
-        Virtual Data Container
+        Virtual Data Container6
       </Link>
 
       {' - Artifact Editor © '}
