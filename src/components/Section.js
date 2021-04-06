@@ -1641,7 +1641,7 @@ class Section extends Component {
       this.props.setGOflag(false)
       this.props.setCheckFlag(false)
       this.props.setActiveStep(0)
-      //err.toString() might throw an error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      //err.toString() might throw an error!
       this.props.setErrorList(err.toString())
     }
   }
@@ -2055,7 +2055,7 @@ class Section extends Component {
         <br/> 
         <Grid container spacing={4}>       
           <Grid item xs={12} sm={12}>
-            <Button
+            {/*<Button
               variant='contained'
               color='primary'
               align='left'
@@ -2072,7 +2072,7 @@ class Section extends Component {
               className={classes.buttonMain}
             >
               Log Info
-            </Button>
+            </Button>*/}
             <Button
               variant='contained'
               color='primary'

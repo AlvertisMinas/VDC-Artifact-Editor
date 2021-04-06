@@ -4,19 +4,19 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Grow from '@material-ui/core/Grow';
 
-import ItemString from './ItemString'
-import ItemPrefixString from './ItemPrefixString'
-import ItemEnum from './ItemEnum'
-import ItemBoolean from './ItemBoolean'
-import ItemObject from './ItemObject'
-import ItemNumber from './ItemNumber'
-import ItemConst from './ItemConst'
+import ItemString from './simple_fields/ItemString'
+import ItemPrefixString from './simple_fields/ItemPrefixString'
+import ItemEnum from './simple_fields/ItemEnum'
+import ItemBoolean from './simple_fields/ItemBoolean'
+import ItemObject from './simple_fields/ItemObject'
+import ItemNumber from './simple_fields/ItemNumber'
+import ItemConst from './simple_fields/ItemConst'
 
-import IMCinnerOneOfControls from './IMCinnerOneOfControls'
-import IMCtitle from './IMCtitle'
-import IMCnameWithChevronButton from './IMCnameWithChevronButton'
-import IMCarrayItemDeleteButtonAndIndex from './IMCarrayItemDeleteButtonAndIndex'
-import IMCarrayNewItemButton from './IMCarrayNewItemButton'
+import IMCinnerOneOfControls from './IMC_components/IMCinnerOneOfControls'
+import IMCtitle from './IMC_components/IMCtitle'
+import IMCnameWithChevronButton from './IMC_components/IMCnameWithChevronButton'
+import IMCarrayItemDeleteButtonAndIndex from './IMC_components/IMCarrayItemDeleteButtonAndIndex'
+import IMCarrayNewItemButton from './IMC_components/IMCarrayNewItemButton'
 
 import DeleteIcon from '@material-ui/icons/Delete';
 
@@ -259,6 +259,7 @@ class ItemMasterComponent extends Component {
               isArray={true}
               buttonRef={this.buttonRef}
               handleChevronClicked={this.handleChevronClicked}
+              arraySize={content.length}
             />
           </Grid>
           <br/>
@@ -354,6 +355,7 @@ class ItemMasterComponent extends Component {
                 isArray={true}
                 buttonRef={this.buttonRef}
                 handleChevronClicked={this.handleChevronClicked}
+                arraySize={content.length}
               />
               {chevronFlag?
                 (name === this.state.showProp)?
@@ -402,7 +404,8 @@ class ItemMasterComponent extends Component {
             )
 
       case 'object':
-        //if:   ?????
+        //if: object elements
+        //else: object fields
         if(info.props !== undefined) {
           return (
             <Grid key={name} item xs={12} sm={12}>
@@ -674,9 +677,8 @@ class ItemMasterComponent extends Component {
       const msg5 = '(Returning to Home Page will result in you losing all your progress)'
       alert(msg1 + '\n' + err + '\n\n' + msg2 + '\n\n' + msg3 + '\n' + msg4 + '\n' + msg5)
 
-      // CHANGE HERE!!!!!!!!!
       this.props.setErrorList(JSON.stringify(error_path))
-      ///////////////////////
+
       return (
         <Grid container spacing={4}>
           <Grid item xs={12}>

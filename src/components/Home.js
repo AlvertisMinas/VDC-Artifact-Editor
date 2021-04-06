@@ -27,7 +27,16 @@ import { ShowTheRules, ShowHelp } from './home_functions/HomeShowRulesAndHelp'
 function Copyright () {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
-      {'Virtual Data Container - Artifact Editor © '}
+      <Link
+        color='inherit'
+        rel='noopener noreferrer'
+        href='https://thevdc.github.io/virtualdatacontainer/'
+        target='_blank'
+      >
+        Virtual Data Container
+      </Link>
+
+      {' - Artifact Editor © '}
       <Link
         color='inherit'
         rel='noopener noreferrer'
@@ -473,13 +482,13 @@ export default function Checkout () {
           <>
             <div className={classes.buttons}>
               {/* <Button
-                              variant='contained'
-                              color='primary'
-                              onClick={() => { console.log(JSON.stringify(masterStates, null, 2)) }}
-                              className={classes.button}
-                            >
-                              masterStates
-                            </Button> */}
+                variant='contained'
+                color='primary'
+                onClick={() => { console.log(JSON.stringify(masterStates, null, 2)) }}
+                className={classes.button}
+              >
+                masterStates
+              </Button> */}
             </div>
             {GOflag === true
               ? <>
