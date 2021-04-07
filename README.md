@@ -31,7 +31,7 @@ Start the development server:
 npm start
 ```
 
-If done properly VDC-Artifact-Editor should be running at:
+If done properly <b>VDC-Artifact-Editor</b> should be running at:
 ```bash
 http://localhost:3000
 ```
