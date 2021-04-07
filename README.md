@@ -16,14 +16,14 @@ Enter the project's folder:
 cd name_of_the_app
 ```
 
-Install Material-UI core and icons:
+Install <b>Material-UI</b> core and icons:
 
 ```bash
 npm install @material-ui/core
 npm install @material-ui/icons
 ```
 
-Replace the /src folder with the one in this repository.
+Replace the `/src` folder with the one in this repository.
 
 Start the development server:
 
