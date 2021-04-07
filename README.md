@@ -4,7 +4,7 @@
 
 ## Installation
 
-Assuming nodeJS & npm is already installed on the machine, create a new react application:
+Assuming nodeJS & npm are already installed on the machine, create a new react application:
 
 ```bash
 npx create-react-app name_of_the_app
